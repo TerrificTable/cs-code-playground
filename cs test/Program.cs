@@ -10,13 +10,25 @@ namespace cs_Tutorial
     {
         static void Main()
         {
+            idle();
             string n = Console.ReadLine();
             SayHello(n);
             Console.ReadKey();
 
             void SayHello(string name)
             {
-                Console.WriteLine("Hello " + name);
+                if(name != null || name != "")  
+                {
+                    Console.WriteLine("Hello " + name);
+                }
+                else
+                {
+                    Console.WriteLine("Wrong input");
+                }
+            }
+            void idle()
+            {
+                Console.WriteLine("$>");
             }
         }
     }
